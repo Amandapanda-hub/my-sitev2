@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
+import PropTypes from 'prop-types';
 import { HashLink as Link } from 'react-router-hash-link';
 import {
   StyledSearchIcon,
@@ -27,7 +28,7 @@ export default function NavBar({ heroSectionId }) {
   const [isMobileView, setMobileView] = useState(false);
   const location = useLocation();
 
-  const checkIfSticky = () => {
+  const checkIfSticky = useCallback(() => {
     const heroSection = document.getElementById(heroSectionId);
 
     if (heroSection) {
@@ -39,11 +40,11 @@ export default function NavBar({ heroSectionId }) {
         setissticky(false);
       }
     }
-  };
+  }, [heroSectionId]);
 
-  const checkMobileView = () => {
+  const checkMobileView = useCallback(() => {
     setMobileView(window.innerWidth <= 990);
-  };  
+  }, []);
 
   useEffect(() => {
     window.addEventListener('scroll', checkIfSticky);
@@ -56,7 +57,11 @@ export default function NavBar({ heroSectionId }) {
       window.removeEventListener('scroll', checkIfSticky);
       window.removeEventListener('resize', checkMobileView);
     };
-  }, []);
+  }, [checkIfSticky, checkMobileView]);
+
+  NavBar.propTypes = {
+    heroSectionId: PropTypes.string.isRequired,
+  };
 
   const menuList = (
     <List>
