@@ -2,6 +2,8 @@
 import {Section, Container, Links, Logo, List, ListItem, LogoBox, StyledHomeIcon, StyledWorkIcon, StyledContactIcon, StyledAttributionIcon} from './FooterStyles.js'
 import { HashLink as Link } from 'react-router-hash-link';
 import { useLocation } from 'react-router-dom';
+import PandaProgrammerLogo from '../../assets/brand/PandaProgrammerLogo.png';
+
 
 export default function Footer() {
   const location = useLocation();
@@ -31,7 +33,7 @@ export default function Footer() {
         </Links>
         
         <LogoBox> 
-            <Logo src="/src/assets/brand/PandaProgrammerLogo.png"/>
+            <Logo src={PandaProgrammerLogo} alt="Panda Programmer Logo" />
           </LogoBox>
         
         </Container>
