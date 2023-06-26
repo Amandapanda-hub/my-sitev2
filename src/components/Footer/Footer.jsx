@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import {Section, Container, Links, Logo, List, ListItem, LogoBox, StyledHomeIcon, StyledWorkIcon, StyledContactIcon, StyledAttributionIcon} from './FooterStyles.js'
 import { HashLink as Link } from 'react-router-hash-link';
 import { useLocation } from 'react-router-dom';
@@ -31,7 +31,7 @@ export default function Footer() {
         </Links>
         
         <LogoBox> 
-            <Logo src="../src/assets/brand/PandaProgrammerLogo.png"/>
+            <Logo src="/src/assets/brand/PandaProgrammerLogo.png"/>
           </LogoBox>
         
         </Container>

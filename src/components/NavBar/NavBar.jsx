@@ -107,7 +107,7 @@ export default function NavBar({ heroSectionId }) {
     <Section $issticky={issticky}>
       <Container>
         <Links>
-          <Logo src="../src/assets/brand/PandaProgrammerLogo.png" />
+          <Logo src="/src/assets/brand/PandaProgrammerLogo.png" />
           {isMobileView ? (
             <>
               <Icon onClick={() => setMenuOpen(!isMenuOpen)}>
