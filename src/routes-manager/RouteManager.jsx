@@ -9,7 +9,7 @@ import AttributionPage from '../pages/Attribution/AttributionPage';
 import NavBar from '../components/NavBar/NavBar';
 import Footer from '../components/Footer/Footer';
 import Portfolio from '../pages/Portfolio/Portfolio';
-// import StarBackground from '../components/Stars/StarBackground';
+import FixedGradientImage from '../assets/images/fixedgradient.jpg'
 
 const Container = styled.div`
   height: 100vh;
@@ -19,7 +19,7 @@ const Container = styled.div`
   overflow-x: hidden;
   scrollbar-width: none;
   color: white;
-  background: url("../src/assets/images/fixedgradient.jpg");
+  background: url(${FixedGradientImage});
   &::-webkit-scrollbar {
     display: none;
   }
