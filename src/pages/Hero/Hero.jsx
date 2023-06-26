@@ -1,9 +1,10 @@
-import React from 'react'
+// import React from 'react'
 // import styled from 'styled-components'
 import NavBar from '../../components/NavBar/NavBar'
 import {AiOutlineArrowRight} from "react-icons/ai"
 import { Section, Container, Left, Title, WhatWeDo, Line, Subtitle, Desc, Button, Right, Img, Lang } from './HeroStyles.js';
 import Blob from '../../components/Blob/Blob';
+import VeryRoundedPersonalSelfie from '../../assets/images/veryroundedpersonalselfie.png'
 
 
 export default function Hero() {
@@ -26,10 +27,9 @@ export default function Hero() {
             <Right>
                 {/* 3d MODEL */}
                 <Blob/>
-                <Img src="../src/assets/images/veryroundedpersonalselfie.png"/>
+                <Img src={VeryRoundedPersonalSelfie} alt="Personal Selfie" />
             </Right>
         </Container>
     </Section>
   )
 }
-
