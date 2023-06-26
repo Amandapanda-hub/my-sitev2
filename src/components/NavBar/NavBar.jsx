@@ -1,6 +1,8 @@
 import { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { HashLink as Link } from 'react-router-hash-link';
+import PandaProgrammerLogo from '../../assets/brand/PandaProgrammerLogo.png';
+
 import {
   StyledSearchIcon,
   Section,
@@ -112,7 +114,7 @@ export default function NavBar({ heroSectionId }) {
     <Section $issticky={issticky}>
       <Container>
         <Links>
-          <Logo src="/src/assets/brand/PandaProgrammerLogo.png" />
+        <Logo src={PandaProgrammerLogo} alt="Panda Programmer Logo" />
           {isMobileView ? (
             <>
               <Icon onClick={() => setMenuOpen(!isMenuOpen)}>
