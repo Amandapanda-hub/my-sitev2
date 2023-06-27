@@ -10,6 +10,8 @@ import NavBar from '../components/NavBar/NavBar';
 import Footer from '../components/Footer/Footer';
 import Portfolio from '../pages/Portfolio/Portfolio';
 import FixedGradientImage from '../assets/images/fixedgradient.jpg'
+// import Hire from '../pages/Hire/Hire';
+import NotFoundPage from '../pages/NotFoundPage/NotFoundPage';
 
 const Container = styled.div`
   height: 100vh;
@@ -34,6 +36,7 @@ const MainContent = styled.div`
 export default function RouteManager() {
     return (
         <> 
+
         <Container>
         <Routes>
             <Route path="/" element={ 
@@ -59,10 +62,17 @@ export default function RouteManager() {
               <AttributionPage />
             </>
           } />
+          {/* <Route path="/hire" element={
+            <>
+                <NavBar heroSectionId="attribution-hero-section"/> 
+                <Hire/>
+            </> 
+            } /> */}
+            <Route path="*" element={ <NotFoundPage /> } />
         </Routes>
         <Footer/>
         </Container>
-        {/* <StarBackground/> */}
+
         </>
     );
 }

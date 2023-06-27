@@ -128,7 +128,9 @@ export default function NavBar({ heroSectionId }) {
         </Links>
         {!isMobileView && (
           <Icons>
-            <Button>Hire Now</Button>
+           <Link to="/hire">
+              <Button>Hire Now</Button>
+            </Link>
             <Icon className='CustomIcon'>
               <StyledSearchIcon />
             </Icon>

@@ -1,4 +1,3 @@
-// import React from 'react';
 import { PerspectiveCamera, useTexture } from '@react-three/drei';
 import { MeshStandardMaterial } from 'three';
 import PurplePinkCodeTexture from '../../assets/textures/purplepinkcode.png'
