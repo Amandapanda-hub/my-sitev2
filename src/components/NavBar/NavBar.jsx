@@ -101,7 +101,9 @@ export default function NavBar({ heroSectionId }) {
       </ListItem>
       {isMobileView && (
         <ListItem>
-          <Button>Hire Now</Button>
+          <Link to="/hire">
+            <Button>Hire Now</Button>
+          </Link>
           <Icon>
             <StyledSearchIcon />
           </Icon>

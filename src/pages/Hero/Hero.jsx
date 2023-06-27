@@ -1,5 +1,4 @@
-// import React from 'react'
-// import styled from 'styled-components'
+import { HashLink as Link } from 'react-router-hash-link';
 import NavBar from '../../components/NavBar/NavBar'
 import {AiOutlineArrowRight} from "react-icons/ai"
 import { Section, Container, Left, Title, WhatWeDo, Line, Subtitle, Desc, Button, Right, Img, Lang } from './HeroStyles.js';
@@ -22,7 +21,9 @@ export default function Hero() {
                 </WhatWeDo>
                 <Desc>Exploring an interstellar journey, charting the vast universe of programming languages, cutting-edge algorithms, and pioneering software innovation. Discovering the beauty of code.</Desc>
                 <Lang>HTML, CSS, JavaScript, NodeJS, REACT, Express .... </Lang>
-                <Button>Learn More</Button>
+                <Link to='/Learn-More'>
+                    <Button>Learn More</Button>
+                </Link>
             </Left>
             <Right>
                 {/* 3d MODEL */}

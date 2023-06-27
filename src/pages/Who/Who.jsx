@@ -1,5 +1,4 @@
-import React from 'react'
-// import styled from 'styled-components'
+import { HashLink as Link } from 'react-router-hash-link';
 import {AiOutlineArrowRight} from "react-icons/ai"
 import { StyledSvg, Section, Container, Left, Title, Subtitle, Right, WhatWeDo, Line, Smalltitle, Desc, Button } from './WhoStyles.js';
 
@@ -23,7 +22,9 @@ export default function Who() {
                     <Smalltitle>Who I Am</Smalltitle>
                 </WhatWeDo>
                 <Desc>Soaring through the expanses of programming, navigating galaxies of languages to shape digital worlds.</Desc>
-                <Button>See My Work</Button>
+                <Link to="/portfolio#my-portfolio">
+                    <Button>See My Work</Button>
+                </Link>
             </Right>
         </Container>
     </Section>

@@ -9,12 +9,19 @@ min-height: 100vh;
 position: relative;
 top: 50%;
 left: 50%;
-transform: translate(-50%, -40%);
+transform: translate(-50%, -35%);
 
 @media (max-width: 768px) {
     transform: translate(-50%, -20%);
 }
 
+@media (max-width: 650px) {
+    transform: translate(-50%, -10%); 
+}
+
+@media (min-width: 740px-850px) {
+    transform: translate(-50%, -20%); 
+}
 `;
 
 export const Loader = styled.img`
@@ -23,6 +30,7 @@ export const Loader = styled.img`
   margin-bottom: 15px;
 
   @media (max-width: 768px) {
+    transform: translate(-50%, -20%); 
     width: 70px;
     height: 70px;
   }
@@ -31,6 +39,7 @@ export const Loader = styled.img`
     width: 50px;
     height: 50px;
   }
+
 `;
 
 export const StyledText = styled.h1`
