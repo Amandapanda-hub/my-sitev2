@@ -1,6 +1,6 @@
 import { PerspectiveCamera, useTexture } from '@react-three/drei';
 import { MeshStandardMaterial } from 'three';
-import PurplePinkCodeTexture from '../../assets/textures/purplepinkcode.png'
+import PurplePinkCodeTexture from '../../assets/textures/purplepinkcode.webp'
 
 
 export default function Cube({ scale = 1 }) {
