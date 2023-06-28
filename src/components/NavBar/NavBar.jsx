@@ -17,7 +17,6 @@ import {
   StyledHomeIcon,
   StyledWorkIcon,
   StyledContactIcon,
-  StyledAttributionIcon,
   MobileMenu,
   StyledMenuIcon,
   StyledCloseIcon
@@ -92,11 +91,6 @@ export default function NavBar({ heroSectionId }) {
       <ListItem>
         <Link to="/#contact-section">
           Contact<StyledContactIcon />
-        </Link>
-      </ListItem>
-      <ListItem hideOnMobile>
-        <Link smooth to="/attribution#attribution-section">
-          Attribution<StyledAttributionIcon />
         </Link>
       </ListItem>
       {isMobileView && (

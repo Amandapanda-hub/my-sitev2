@@ -1,16 +1,15 @@
-// import React from 'react';
-import {Routes, Route} from 'react-router-dom';
+import { useState, useEffect, useCallback } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { styled } from 'styled-components';
-import Hero from '../pages/Hero/Hero'
-import Who from '../pages/Who/Who'
-import Works from '../pages/Works/Works'
-import Contact from '../pages/Contact/Contact'
+import Hero from '../pages/Hero/Hero';
+import Who from '../pages/Who/Who';
+import Works from '../pages/Works/Works';
+import Contact from '../pages/Contact/Contact';
 import AttributionPage from '../pages/Attribution/AttributionPage';
 import NavBar from '../components/NavBar/NavBar';
 import Footer from '../components/Footer/Footer';
 import Portfolio from '../pages/Portfolio/Portfolio';
-import FixedGradientImage from '../assets/images/fixedgradient.jpg'
-// import Hire from '../pages/Hire/Hire';
+import FixedGradientImage from '../assets/images/fixedgradient.jpg';
 import NotFoundPage from '../pages/NotFoundPage/NotFoundPage';
 
 const Container = styled.div`
@@ -27,6 +26,10 @@ const Container = styled.div`
   }
 `;
 
+const RouteSection = styled.div`
+  margin: 0 4rem;
+`
+
 const MainContent = styled.div`
   @media (max-width: 1221px) {
     display: none;
@@ -34,45 +37,74 @@ const MainContent = styled.div`
 `;
 
 export default function RouteManager() {
-    return (
-        <> 
+  const [isSticky, setIsSticky] = useState(false);
 
-        <Container>
+  const checkIfSticky = useCallback(() => {
+    const heroSection = document.getElementById('hero-section');
+    if (heroSection) {
+      const heroSectionHeight = heroSection.offsetHeight;
+      setIsSticky(window.pageYOffset > heroSectionHeight);
+    }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', checkIfSticky);
+    return () => {
+      window.removeEventListener('scroll', checkIfSticky);
+    };
+  }, [checkIfSticky]);
+
+  const isNotFoundPage = location.pathname === '/notfoundpage';
+
+
+  return (
+    <>
+      <Container>
+        <RouteSection>
+
         <Routes>
-            <Route path="/" element={ 
-                <>
-                    <Hero />
-                    <Who />
-                    <MainContent>
-                      <Works />
-                    </MainContent>
-                    <Contact />
-                </>
-            } />
-            <Route path="/portfolio" element={
-                <>
-                    <NavBar heroSectionId="attribution-hero-section" /> 
-                    <Portfolio/>
-                </>
-            }/>
-            <Route path="/contact" element={ <Contact /> } />
-          <Route path="/attribution" element={
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero id="hero-section" />
+                <Who />
+                <MainContent>
+                  <Works />
+                </MainContent>
+                <Contact />
+              </>
+            }
+          />
+          <Route
+            path="/portfolio"
+            element={
+              <>
+                <NavBar isSticky={isSticky} />
+                <Portfolio />
+              </>
+            }
+          />
+          <Route path="/contact" element={<Contact />} />
+          <Route
+            path="/attribution"
+            element={
+              <>
+                <NavBar isSticky={isSticky} />
+                <AttributionPage />
+              </>
+            }
+          />
+          <Route path="*" element={
             <>
-              <NavBar heroSectionId="attribution-hero-section" />
-              <AttributionPage />
+            {/* <NavBar isSticky={isSticky}/> */}
+            <NotFoundPage />
             </>
-          } />
-          {/* <Route path="/hire" element={
-            <>
-                <NavBar heroSectionId="attribution-hero-section"/> 
-                <Hire/>
-            </> 
-            } /> */}
-            <Route path="*" element={ <NotFoundPage /> } />
-        </Routes>
-        <Footer/>
-        </Container>
-
-        </>
-    );
+            } />
+        </Routes>       
+        </RouteSection>
+        <Footer />
+      </Container>
+    </>
+  );
 }

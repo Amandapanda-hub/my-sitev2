@@ -15,7 +15,7 @@ export const Container = styled.div`
  display: flex;
  flex-direction: row;
  justify-content: space-between;
- padding: 0 2em;
+ padding: 0 8em;
 
  @media (max-width: 1026px) {
     flex-direction: column;
@@ -29,8 +29,17 @@ export const Container = styled.div`
  } 
 `;
 
+export const Right = styled.div`
+ width: 50%;
+ position: relative;
+ 
+ @media (max-width: 1023px) {
+    display: none;
+  }
+`;
+
 export const Left = styled.div`
- width: 100%;
+ width: 50%;
  display: flex;
  flex-direction: column;
  justify-content: center;
@@ -110,14 +119,6 @@ export const Button = styled.button`
  } 
 `;
 
-export const Right = styled.div`
- width: 100%;
- position: relative;
- 
- @media (max-width: 1023px) {
-    display: none;
-  }
-`;
 
 export const Img = styled.img`
  width: 100%;

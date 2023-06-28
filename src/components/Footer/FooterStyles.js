@@ -20,61 +20,44 @@ export const Section = styled.div`
     align-items: center;
     padding: 15px 0px;
     margin-left: 6rem;
-    
-    @media (max-width: 1110px) {
-        flex-direction: column;
-        align-items: flex-start;
-    }
 
     @media (max-width: 960px) {
-        max-width: 80%;
-        height: auto;
-        justify-content: flex-end;
-
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
  `; 
 
+
  export const Logo = styled.img`
-    height: 13rem;
-    width: auto ;
+ height: 13rem;
+ width: auto;
 
-    @media (min-width: 1110px) {
-        max-width: 80%;
-        height: auto;
-        justify-content: flex-end;
+ @media (max-width: 960px) {
+   margin-top: 10px;
+ }
 
-    }
-
-    @media (max-width: 960px) {
-        max-width: 80%;
-        height: auto;
-        justify-content: flex-end;
-
-    }
 `;
 
  export const Links = styled.div`
-     display: flex;
-     align-items: center;
+ display: flex;
+  align-items: center;
 
-     @media (min-width: 768px) {
-        align-items: flex-start;
-    }
+  @media (max-width: 960px) {
+    order: 1;
+  }
  `; 
 
  export const List = styled.ul`
-     display: flex;
-     gap: 100px;
-     list-style: none;
-     
+ display: flex;
+  gap: 100px;
+  list-style: none;
 
-    @media (min-width: 1110px) {
-      align-items: center;
-      }
-
-      @media (max-width: 960px) {
-        flex-direction: column;
-      }
+  @media (max-width: 960px) {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
  `;
  
 export const ListItem = styled.li`
@@ -113,18 +96,13 @@ export const StyledAttributionIcon = styled(BiBookHeart)`
 
 export const LogoBox = styled.div`
 display: flex;
-width: 100%;
-height: auto;
-justify-content: center;
+  justify-content: center;
+  align-items: center;
 
-@media (max-width: 960px) {
-    justify-content: flex-end;
-
-}
-
-@media (max-width: 1110px) {
-    justify-content: flex-end;
-}
+  @media (max-width: 960px) {
+    order: 2;
+    margin-right: 5rem;
+  }
 `;
 
 export const StyledLink = styled(RouterLink)`

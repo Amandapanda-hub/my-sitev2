@@ -1,17 +1,22 @@
-import { Container, StyledText, Loader, StyledSvg } from './Styled404Page.js';
-// import robotImage from '../assets/robotImage.png'; // Please replace this with the path to your robot image.
-import LoaderSvg from '../../assets/404/loader.svg'
+import { Container, ErrorSection, StyledText, Loader, StyledSvg, Button } from './Styled404Page.js';
+import { HashLink as Link } from 'react-router-hash-link';
+import LoaderSvg from '../../assets/404/purple-loader.svg'
 import StyledBug from '../../assets/404/fixing_bugs.svg'
-// const Dot = () => <StyledDot />;
 
 export default function NotFoundPage() {
   return (
-    <Container>
+    <ErrorSection>
+        <Container>
       {/* <StyledRobot src={robotImage} alt="Cute Robot"/> */}
       <StyledSvg src={StyledBug} alt="Looks like we're fixing a bug!"/>
       <StyledText>Oops! Page not found...</StyledText>
       <Loader src={LoaderSvg} alt="Loading..."/>
-      
-    </Container>
+      <StyledText>
+        <Link to="/#hero-section">
+            <Button>Go Home?</Button>
+        </Link>
+      </StyledText>
+        </Container>
+    </ErrorSection>
   );
 }

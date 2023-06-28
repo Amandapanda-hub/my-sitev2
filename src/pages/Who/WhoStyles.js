@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { ReactComponent as SpaceshipSvg } from '../../assets/SVG/spacelaunch.svg';
 
 export const StyledSvg = styled(SpaceshipSvg)`
-width: 80%;
+width: 60%;
 height: auto;
 object-fit: contain;
 position: absolute;
@@ -24,18 +24,23 @@ z-index: 2;
   }
 
   @media (max-width: 1023px) {
-    padding-top: 12rem;
-    padding-bottom: 0;
-    width: 300px;
-    height: 300px;
-    left: 50% auto;
-    animation: none;
+
   }
 
-  @media (max-width: 500px) {
-    width: 250px;
-  }
 `;
+// <<<<
+// padding-top: 12rem;
+//     padding-bottom: 0;
+//     margin-bottom: -10rem;
+//     width: 300px;
+//     height: 300px;
+//     left: 50% auto;
+//     animation: none;
+//   }
+
+//   @media (max-width: 500px) {
+//     width: 250px;
+//   }
 
 export const Section = styled.div`
  height: 100vh;
@@ -61,12 +66,18 @@ export const Container = styled.div`
 export const Left = styled.div`
  width: 100%;
  position: relative;
+ 
 
  @media (min-width: 1024px) {
    width: 50%;
    
+   
  }
 `;
+// <<<
+// display: flex;
+//  flex-direction: column;
+//  justify-content: center;
 
 export const Title = styled.h1`
  font-size: 2em;
@@ -96,11 +107,11 @@ gap: 20px;
 }
 
 @media (max-width: 1023px) {
-    padding-top: 8rem;
+   
 }
 
 @media (min-width: 1023px) {
-    padding-top: 4rem;
+   
 }
 `;
 
