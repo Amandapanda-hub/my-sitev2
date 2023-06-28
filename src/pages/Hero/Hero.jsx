@@ -3,7 +3,7 @@ import NavBar from '../../components/NavBar/NavBar'
 import {AiOutlineArrowRight} from "react-icons/ai"
 import { Section, Container, Left, Title, WhatWeDo, Line, Subtitle, Desc, Button, Right, Img, Lang } from './HeroStyles.js';
 import Blob from '../../components/Blob/Blob';
-import VeryRoundedPersonalSelfie from '../../assets/images/veryroundedpersonalselfie.png'
+import VeryRoundedPersonalSelfie from '../../assets/images/smallerfile-veryroundedpersonalselfie.webp'
 
 
 export default function Hero() {
