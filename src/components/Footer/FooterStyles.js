@@ -13,66 +13,136 @@ export const Section = styled.div`
  `;
 
  export const Container = styled.div`
-    width: 100%;
-    max-width: 1400px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0px;
-    margin-left: 6rem;
+ width: 100%;
+ max-width: 1400px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 15px 0px;
+ margin-left: 6rem;
 
-    @media (max-width: 960px) {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+ @media (max-width: 960px) {
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ }
+ 
+ @media (max-width: 414px) {
+     flex-direction: row;
+     align-items: flex-start;
+ }
+
+ 
+
  `; 
 
 
  export const Logo = styled.img`
- height: 13rem;
+ height: 10vw;
  width: auto;
 
- @media (max-width: 960px) {
-   margin-top: 10px;
+ @media (min-width: 961px) {
+    height: 13rem;
  }
+
+ @media (max-width: 414px) {
+    margin-top: 4rem;
+    margin-left: 1rem;
+    height: 25vw;
+ }
+
+ @media (max-width: 360px) and (max-height: 740px ) {
+    height: 24vw;
+ }
+
+ @media (min-width: 415px) and (max-width: 960px) {
+   height: 20vw;
+}
 
 `;
 
  export const Links = styled.div`
  display: flex;
-  align-items: center;
+ align-items: center;
 
-  @media (max-width: 960px) {
+ @media (max-width: 960px) {
     order: 1;
-  }
+ }
+
+ @media (max-width: 414px) {
+    flex-direction: column;
+    align-items: flex-start;
+ }
+
  `; 
 
  export const List = styled.ul`
  display: flex;
-  gap: 100px;
-  list-style: none;
+ gap: 100px;
+ list-style: none;
 
-  @media (max-width: 960px) {
+ @media (max-width: 960px) {
     flex-direction: row;
     justify-content: center;
     gap: 20px;
-  }
+ }
+
+ @media (min-width: 415px) and (max-width: 960px) {
+    gap: 5rem;
+}
+
+ @media (max-width: 414px) {
+    flex-direction: column;
+    gap: 15px; 
+ }
+
+ @media (max-width: 360px) and (max-height: 740px ) {
+    gap: 10px;
+ }
  `;
  
 export const ListItem = styled.li`
-     margin-right: 100px;
-     
-   &:last-child {
-     margin-right: 0;
-   }
+margin-right: 100px;
+ 
+&:last-child {
+  margin-right: 0;
+}
 
-   @media (max-width: ${({ hideOnMobile }) => hideOnMobile ? '990px' : 'none'}) {
-    display: none;
-  }
+@media (max-width: ${({ hideOnMobile }) => hideOnMobile ? '990px' : 'none'}) {
+ display: none;
+}
+
+@media (max-width: 960px) {
+ margin-right: 9px;
+}
+
+@media (max-width: 414px) {
+ margin-bottom: 10px;  
+}
  `; 
 
- export const StyledHomeIcon = styled(AiOutlineHome)`
+export const LogoBox = styled.div`
+display: flex;
+ justify-content: center;
+ align-items: center;
+
+ @media (max-width: 960px) {
+  order: 2;
+  margin-right: 5rem;
+ }
+ 
+ @media (max-width: 414px) {
+  order: 1;
+  margin-right: 20px;
+ }
+
+ @media (min-width: 415px) and (max-width: 960px) {
+   margin-right: 4rem;
+}
+`;
+
+
+export const StyledHomeIcon = styled(AiOutlineHome)`
     font-size: 20px;
     margin-right: 10px;
 `;
@@ -86,24 +156,12 @@ export const StyledContactIcon = styled(BiMessageDetail)`
     font-size: 20px;
     margin-right: 10px;
     transform: scaleX(-1);
-    
 `
 
 export const StyledAttributionIcon = styled(BiBookHeart)`
     font-size: 20px;
     margin-right: 10px; 
 `
-
-export const LogoBox = styled.div`
-display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @media (max-width: 960px) {
-    order: 2;
-    margin-right: 5rem;
-  }
-`;
 
 export const StyledLink = styled(RouterLink)`
     
