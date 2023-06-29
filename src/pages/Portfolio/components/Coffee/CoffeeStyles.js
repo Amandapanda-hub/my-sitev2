@@ -194,13 +194,16 @@ export const PortfolioLink = styled.a`
     display: flex; 
     align-items: center;
     justify-content: center;
-
+    padding-top: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    
     .link-icon {
         opacity: 0;
         transition: opacity ease-in-out;
         margin-top: 5px;
         margin-left: 5px;
-        font-size: 20px;
+        font-size: 15px;
       }
     
       &:hover {

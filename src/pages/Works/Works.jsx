@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import {data, Section, Container, Left, List, fillAnimation, ListItem, Right} from './WorkStyles.js'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'

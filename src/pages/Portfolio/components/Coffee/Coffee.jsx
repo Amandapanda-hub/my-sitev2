@@ -22,9 +22,9 @@ export default function Coffee() {
                <Left>
                     <StyledSvg/>
                         <Header>My Works</Header>
-                    <IconContainer>
-                        <StyledIcon/> 
-                    </IconContainer>
+                            <IconContainer>
+                                <StyledIcon/> 
+                            </IconContainer>
                 </Left>
              
                         <Right>
