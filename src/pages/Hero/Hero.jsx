@@ -1,8 +1,8 @@
 import { HashLink as Link } from 'react-router-hash-link';
 import NavBar from '../../components/NavBar/NavBar'
 import {AiOutlineArrowRight} from "react-icons/ai"
-import { Section, Container, Left, Title, Right, Img, Lang } from './HeroStyles.js';
-import { Button, WhatWeDoTitle, WhatWeDo, Line, Desc } from '../../GlobalComponents.js'
+import { Section, Left, Title, Right, Img, Lang } from './HeroStyles.js';
+import { Button, WhatWeDoTitle, WhatWeDo, Line, Desc, Container } from '../../GlobalComponents.js'
 import Blob from '../../components/Blob/Blob';
 import VeryRoundedPersonalSelfie from '../../assets/images/smallerfile-veryroundedpersonalselfie.webp'
 

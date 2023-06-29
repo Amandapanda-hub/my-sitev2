@@ -9,25 +9,25 @@ export const Section = styled.div`
  flex-direction: column;
 `;
 
-export const Container = styled.div`
- max-width: 100%;
- height: 100%;
- display: flex;
- flex-direction: row;
- justify-content: space-between;
- padding: 0 8em;
+// export const Container = styled.div`
+//  max-width: 100%;
+//  height: 100%;
+//  display: flex;
+//  flex-direction: row;
+//  justify-content: space-between;
+//  padding: 0 8em;
 
- @media (max-width: 1026px) {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0 2rem 2rem;
-  }
+//  @media (max-width: 1026px) {
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     padding: 0 2rem 2rem;
+//   }
 
-  @media (max-width: 1100px) {
-    margin: 0 2rem 0 ;
- } 
-`;
+//   @media (max-width: 1100px) {
+//     margin: 0 2rem 0 ;
+//  } 
+// `;
 
 export const Right = styled.div`
  width: 50%;
@@ -64,30 +64,6 @@ export const Title = styled.h1`
     font-size: 2em;
   }
 `;
-
-// export const WhatWeDo = styled.div`
-//  display: flex;
-//  align-items: center;
-//  gap: 10px;
-// `;
-
-// export const Line = styled.div`
-//  width: 20px; 
-//  font-size: 20px;
-// `;
-
-// export const Subtitle = styled.h2`
-//  color: #A248FF;
-// `;
-
-// export const Desc = styled.p`
-//  font-size: 1.5em;
-//  color: lightgray;
-
-//  @media (max-width: 768px) {
-//     font-size: 1em;
-//   }
-// `;
 
 export const Lang = styled.p `
     font-size: 1.2em;

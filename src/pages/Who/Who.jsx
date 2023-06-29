@@ -1,7 +1,7 @@
 import { HashLink as Link } from 'react-router-hash-link';
 import {AiOutlineArrowRight} from "react-icons/ai"
-import { StyledSvg, Section, Container, Left, Title, Right } from './WhoStyles.js';
-import { Button, WhatWeDoTitle, WhatWeDo, Line, Desc, MidTitle } from '../../GlobalComponents.js';
+import { StyledSvg, Section, Left, Title, Right } from './WhoStyles.js';
+import { Button, WhatWeDoTitle, WhatWeDo, Line, Desc, MidTitle, Container } from '../../GlobalComponents.js';
 
 export default function Who() {
   return (
