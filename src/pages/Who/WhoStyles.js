@@ -127,13 +127,13 @@ export const Title = styled.h1`
  }
 `;
 
-export const Subtitle = styled.h2`
- font-size: 1.5em;
+// export const Subtitle = styled.h2`
+//  font-size: 1.5em;
 
- @media (min-width: 1024px) {
-    font-size: 2em;
- }
-`;
+//  @media (min-width: 1024px) {
+//     font-size: 2em;
+//  }
+// `;
 
 // export const WhatWeDo = styled.div`
 //  display: flex;

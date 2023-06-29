@@ -37,9 +37,9 @@ export const Left = styled.div`
   }
 `;
 
-export const Title = styled.h1`
-  font-weight: 200;
-`;
+// export const Title = styled.h1`
+//   font-weight: 200;
+// `;
 
 export const Form = styled.form`
   width: 100%;
@@ -82,6 +82,7 @@ export const ContactButton = styled.button`
   cursor: pointer;
   border-radius: 5px;
   padding: 20px;
+  z-index: 2;
   
   @media (max-width: 767px) {
   }
@@ -89,6 +90,7 @@ export const ContactButton = styled.button`
 
 export const Right = styled.div`
   flex: 1;
+  z-index: 2;
   
   @media (max-width: 1110px) {
     display: none;

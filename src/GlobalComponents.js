@@ -9,6 +9,7 @@ export const Button = styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  z-index: 2;
 
   @media (max-width: 768px) {
     padding: 8px;
@@ -59,5 +60,13 @@ export const Desc = styled.p`
 
  @media (min-width: 1024px) {
     font-size: 1.5em;
+ }
+`;
+
+export const MidTitle = styled.h2`
+ font-size: 1.5em;
+
+ @media (min-width: 1024px) {
+    font-size: 2em;
  }
 `;
