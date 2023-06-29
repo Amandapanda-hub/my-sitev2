@@ -1,7 +1,7 @@
 import { HashLink as Link } from 'react-router-hash-link';
 import {AiOutlineArrowRight} from "react-icons/ai"
-import { StyledSvg, Section, Container, Left, Title, Subtitle, Right, WhatWeDo, Line, Smalltitle, Desc } from './WhoStyles.js';
-import { Button } from '../../GlobalComponents.js';
+import { StyledSvg, Section, Container, Left, Title, Subtitle, Right } from './WhoStyles.js';
+import { Button, WhatWeDoTitle, WhatWeDo, Line, Desc } from '../../GlobalComponents.js';
 
 export default function Who() {
   return (
@@ -19,7 +19,7 @@ export default function Who() {
                     <Line>
                         <AiOutlineArrowRight/>
                     </Line>
-                    <Smalltitle>Who I Am</Smalltitle>
+                    <WhatWeDoTitle>Who I Am</WhatWeDoTitle>
                 </WhatWeDo>
                 <Desc>Soaring through the expanses of programming, navigating galaxies of languages to shape digital worlds.</Desc>
                 <Link to="/portfolio#my-portfolio">

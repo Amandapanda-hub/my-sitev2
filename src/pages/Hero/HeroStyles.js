@@ -65,29 +65,29 @@ export const Title = styled.h1`
   }
 `;
 
-export const WhatWeDo = styled.div`
- display: flex;
- align-items: center;
- gap: 10px;
-`;
+// export const WhatWeDo = styled.div`
+//  display: flex;
+//  align-items: center;
+//  gap: 10px;
+// `;
 
-export const Line = styled.div`
- width: 20px; 
- font-size: 20px;
-`;
+// export const Line = styled.div`
+//  width: 20px; 
+//  font-size: 20px;
+// `;
 
-export const Subtitle = styled.h2`
- color: #A248FF;
-`;
+// export const Subtitle = styled.h2`
+//  color: #A248FF;
+// `;
 
-export const Desc = styled.p`
- font-size: 1.5em;
- color: lightgray;
+// export const Desc = styled.p`
+//  font-size: 1.5em;
+//  color: lightgray;
 
- @media (max-width: 768px) {
-    font-size: 1em;
-  }
-`;
+//  @media (max-width: 768px) {
+//     font-size: 1em;
+//   }
+// `;
 
 export const Lang = styled.p `
     font-size: 1.2em;

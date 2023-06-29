@@ -135,29 +135,29 @@ export const Subtitle = styled.h2`
  }
 `;
 
-export const WhatWeDo = styled.div`
- display: flex;
- align-items: center;
- gap: 10px;
-`;
+// export const WhatWeDo = styled.div`
+//  display: flex;
+//  align-items: center;
+//  gap: 10px;
+// `;
 
-export const Line = styled.div`
- width: 20px; 
- font-size: 20px;
-`;
+// export const Line = styled.div`
+//  width: 20px; 
+//  font-size: 20px;
+// `;
 
-export const Smalltitle = styled.h2`
- color: #A248FF;
-`;
+// export const Smalltitle = styled.h2`
+//  color: #A248FF;
+// `;
 
-export const Desc = styled.p`
- font-size: 1em;
- color: lightgray;
+// export const Desc = styled.p`
+//  font-size: 1em;
+//  color: lightgray;
 
- @media (min-width: 1024px) {
-    font-size: 1.5em;
- }
-`;
+//  @media (min-width: 1024px) {
+//     font-size: 1.5em;
+//  }
+// `;
 
 // export const Button = styled.button`
 //  background-color: #A248FF;
