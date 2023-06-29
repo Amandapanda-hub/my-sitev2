@@ -41,19 +41,22 @@ export default function RouteManager() {
   return (
     <>
       <Container>
-        <RouteSection>
+       
 
         <Routes>
           <Route
             path="/"
             element={
               <>
+               <RouteSection>
                 <Hero id="hero-section" />
                 <Who />
                 <MainContent>
                   <Works />
                 </MainContent>
+                </RouteSection>
                 <Contact />
+                
               </>
             }
           />
@@ -61,8 +64,10 @@ export default function RouteManager() {
             path="/portfolio"
             element={
               <>
+               <RouteSection>
                 <NavBar />
                 <Portfolio />
+                </RouteSection>
               </>
             }
           />
@@ -71,19 +76,25 @@ export default function RouteManager() {
             path="/attribution"
             element={
               <>
+               <RouteSection>
                 <NavBar />
                 <AttributionPage />
+                </RouteSection>
               </>
             }
           />
           <Route path="*" element={
             <>
-            {/* <NavBar isSticky={isSticky}/> */}
-            <NotFoundPage />
+            <RouteSection>
+
+                <NotFoundPage />
+
+            </RouteSection>
             </>
             } />
+          
         </Routes>       
-        </RouteSection>
+       
         <Footer />
       </Container>
     </>

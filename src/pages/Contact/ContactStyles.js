@@ -18,6 +18,11 @@ export const Container = styled.div`
   @media (max-width: 1110px) {
     flex-direction: column;
   }
+
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+   gap: 0;
+   padding: 0;
+  }
 `;
 
 export const Left = styled.div`
