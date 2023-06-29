@@ -99,26 +99,6 @@ export const Lang = styled.p `
         font-size: 1em;
       }
 `
-export const Button = styled.button`
- background-color: #A248FF;
- color: white;
- font-weight: 500;
- width: 100px;
- padding: 10px;
- border: none;
- border-radius: 5px;
- cursor: pointer;
-
- @media (max-width: 768px) {
-    padding: 8px;
-    font-size: 0.8em;
-  }
-
-  @media (max-width: 1100px) {
-    align-self: center;
- } 
-`;
-
 
 export const Img = styled.img`
  width: 100%;

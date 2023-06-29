@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { HashLink as Link } from 'react-router-hash-link';
+import { useLocation } from 'react-router-dom';
 import PandaProgrammerLogo from '../../assets/brand/PandaProgrammerLogo.png';
 
 import {
@@ -13,7 +14,7 @@ import {
   Logo,
   List,
   ListItem,
-  Button,
+  // Button,
   StyledHomeIcon,
   StyledWorkIcon,
   StyledContactIcon,
@@ -21,7 +22,9 @@ import {
   StyledMenuIcon,
   StyledCloseIcon
 } from './NavBarStyles.js';
-import { useLocation } from 'react-router-dom';
+
+import {Button} from '../../GlobalComponents.js'
+
 
 export default function NavBar({ heroSectionId }) {
   const [issticky, setissticky] = useState(false);

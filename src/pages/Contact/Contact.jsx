@@ -1,6 +1,6 @@
 // useRef from Emailjs >>
-import React, { useRef, useState } from 'react';
-import {Section, Container, Left, Title, Form, Input, TextArea, Button, Right, StyledPaperPlane} from './ContactStyles.js';
+import { useRef, useState } from 'react';
+import {Section, Container, Left, Title, Form, Input, TextArea, ContactButton, Right, StyledPaperPlane} from './ContactStyles.js';
 import Map from './components/Map/Map.jsx';
 // EmailJs imports >>
 import emailjs from '@emailjs/browser';
@@ -35,7 +35,7 @@ export default function Contact() {
             <Input placeholder="Name" name="name"/>
             <Input placeholder="Email" name="email"/>
             <TextArea placeholder="Write your message" name="message" rows={10}/>
-            <Button type="submit">Send</Button>
+            <ContactButton type="submit">Send</ContactButton>
             {success && "Your message has been sent, I'll get back to you soon!"}
           </Form>
         </Left>

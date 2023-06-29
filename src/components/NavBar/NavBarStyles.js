@@ -167,13 +167,3 @@ export const ListItem = styled.li`
       display: none;
     }
 `;
-
-export const Button = styled.button`
-    width: 100px;
-    padding: 10px;
-    background-color: #A248FF;
-    color: white;
-    border-color: black;
-    border-radius: 5px; 
-    cursor: pointer;
-`;

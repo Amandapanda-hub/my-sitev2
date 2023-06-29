@@ -74,7 +74,7 @@ export const TextArea = styled.textarea`
   }
 `;
 
-export const Button = styled.button`
+export const ContactButton = styled.button`
   background-color: #A248FF;
   color: white;
   border: none;

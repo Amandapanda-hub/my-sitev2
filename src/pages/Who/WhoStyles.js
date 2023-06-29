@@ -159,17 +159,17 @@ export const Desc = styled.p`
  }
 `;
 
-export const Button = styled.button`
- background-color: #A248FF;
- color: white;
- font-weight: 500;
- width: 120px;
- padding: 10px;
- border: none;
- border-radius: 5px;
- cursor: pointer;
+// export const Button = styled.button`
+//  background-color: #A248FF;
+//  color: white;
+//  font-weight: 500;
+//  width: 120px;
+//  padding: 10px;
+//  border: none;
+//  border-radius: 5px;
+//  cursor: pointer;
 
- @media (max-width: 1100px) {
-    align-self: center;
- } 
-`;
+//  @media (max-width: 1100px) {
+//     align-self: center;
+//  } 
+// `;
