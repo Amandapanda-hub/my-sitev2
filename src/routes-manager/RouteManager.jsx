@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+// import { useState, useEffect, useCallback } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { styled } from 'styled-components';
 import Hero from '../pages/Hero/Hero';
@@ -37,25 +37,6 @@ const MainContent = styled.div`
 `;
 
 export default function RouteManager() {
-  const [isSticky, setIsSticky] = useState(false);
-
-  const checkIfSticky = useCallback(() => {
-    const heroSection = document.getElementById('hero-section');
-    if (heroSection) {
-      const heroSectionHeight = heroSection.offsetHeight;
-      setIsSticky(window.pageYOffset > heroSectionHeight);
-    }
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener('scroll', checkIfSticky);
-    return () => {
-      window.removeEventListener('scroll', checkIfSticky);
-    };
-  }, [checkIfSticky]);
-
-  const isNotFoundPage = location.pathname === '/notfoundpage';
-
 
   return (
     <>
@@ -80,7 +61,7 @@ export default function RouteManager() {
             path="/portfolio"
             element={
               <>
-                <NavBar isSticky={isSticky} />
+                <NavBar />
                 <Portfolio />
               </>
             }
@@ -90,7 +71,7 @@ export default function RouteManager() {
             path="/attribution"
             element={
               <>
-                <NavBar isSticky={isSticky} />
+                <NavBar />
                 <AttributionPage />
               </>
             }
