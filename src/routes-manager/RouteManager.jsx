@@ -20,7 +20,8 @@ const Container = styled.div`
   overflow-x: hidden;
   scrollbar-width: none;
   color: white;
-  background: url(${FixedGradientImage});
+  background: url(${FixedGradientImage}) no-repeat center center fixed ;
+  background-size: cover;
   &::-webkit-scrollbar {
     display: none;
   }

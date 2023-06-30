@@ -61,10 +61,11 @@ const GlobalStyle = createGlobalStyle`
       position: fixed;
       top: 0;
       left: 0;
-      max-width: 100%;
+      width: 100%;
       height: 100%;
       z-index: -1;
-      background-color: black;
+      background: black no-repeat center center fixed;
+      background-size: cover;
     }
 
   a {

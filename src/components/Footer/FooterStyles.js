@@ -21,6 +21,11 @@ export const Section = styled.div`
  padding: 15px 0px;
  margin-left: 6rem;
 
+ @media (max-width: 990px) {
+   margin: auto; 
+   padding: 0px 0px;
+}
+
  @media (max-width: 960px) {
      flex-direction: column;
      justify-content: center;
@@ -30,9 +35,12 @@ export const Section = styled.div`
  @media (max-width: 414px) {
      flex-direction: row;
      align-items: flex-start;
+    
  }
 
- 
+//  @media (max-width: 360px) and (max-width: 990px ) {
+//   margin: auto;
+// }  
 
  `; 
 
@@ -40,6 +48,9 @@ export const Section = styled.div`
  export const Logo = styled.img`
  height: 10vw;
  width: auto;
+
+ @media (max-width: 990px) {
+}
 
  @media (min-width: 961px) {
     height: 13rem;
@@ -88,7 +99,7 @@ export const Section = styled.div`
  }
 
  @media (min-width: 415px) and (max-width: 960px) {
-    gap: 5rem;
+    gap: 3rem;
 }
 
  @media (max-width: 414px) {
@@ -126,18 +137,19 @@ display: flex;
  justify-content: center;
  align-items: center;
 
+ @media (max-width: 990px) {
+ }
+
  @media (max-width: 960px) {
   order: 2;
-  margin-right: 5rem;
  }
  
  @media (max-width: 414px) {
   order: 1;
-  margin-right: 20px;
  }
 
  @media (min-width: 415px) and (max-width: 960px) {
-   margin-right: 4rem;
+  
 }
 `;
 
