@@ -13,7 +13,7 @@ import FixedGradientImage from '../assets/images/fixedgradient.jpg';
 import NotFoundPage from '../pages/NotFoundPage/NotFoundPage';
 
 const Container = styled.div`
-  height: 100%;
+  height: 100vh;
   scroll-snap-type: y mandatory; 
   scroll-behavior: smooth;
   overflow-y: auto;
