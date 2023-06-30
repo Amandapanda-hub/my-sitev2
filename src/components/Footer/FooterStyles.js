@@ -37,13 +37,10 @@ export const Section = styled.div`
      align-items: flex-start;
     
  }
-
+ `; 
 //  @media (max-width: 360px) and (max-width: 990px ) {
 //   margin: auto;
 // }  
-
- `; 
-
 
  export const Logo = styled.img`
  height: 10vw;

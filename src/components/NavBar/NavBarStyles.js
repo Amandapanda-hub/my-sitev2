@@ -35,10 +35,7 @@ export const StyledCloseIcon = styled(FaTimes)`
   transition: transform 0.3s ease-in-out; 
   transform: ${({ isMenuOpen }) => (isMenuOpen ? 'translateX(0)' : 'translateX(100%)')}; 
 
-
- @media (max-width: 360px) and (max-height: 700px ) {
   
- }
  `;
 
 
@@ -81,17 +78,24 @@ z-index: 100;
 width: 100%;
 
 
+@media (max-width: 990px) {
+    top: 2rem;
+}
+
 `;
 
 export const Container = styled.div`
    width: 100%;
    max-width: 1400px;
   display: flex;
-
   justify-content: space-between;
   align-items: center;
   padding: 10px 0px;
 
+
+  @media (max-width: 600px ) and (max-width: 990px ) {
+    
+  }
 
   @media (max-width:1240px) {
     width: 100%;
@@ -137,6 +141,10 @@ export const Icons = styled.div`
 export const Logo = styled.img`
     height: 10rem;
 
+
+    @media (max-width: 600px ) and (max-width: 990px ) {
+      height: 8rem;
+    }
     
 
 `;
