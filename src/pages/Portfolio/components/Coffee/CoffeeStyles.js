@@ -1,4 +1,5 @@
-import styled, { keyframes } from 'styled-components'
+// import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import { ReactComponent as CoffeeTime} from '../../../../assets/SVG/newcoffee_time.svg'
 import { BsBookmarkHeart } from 'react-icons/bs';
 
@@ -20,8 +21,11 @@ export const Left = styled.div`
    @media (max-width:700px) {
     margin-top: 5rem;
     height: 2rem;
- 
    }
+
+   @media (max-width: 360px) and (max-height: 740px ) {
+    margin-top: 12rem;
+ }
 `
 
 export const Right = styled.div`
@@ -124,14 +128,14 @@ export const Right = styled.div`
 
 `;
 
-const fillAnimation = keyframes`
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-`;
+// const fillAnimation = keyframes`
+//   0% {
+//     width: 0;
+//   }
+//   100% {
+//     width: 100%;
+//   }
+// `;
  
  export const StyledIcon = styled(BsBookmarkHeart)`
    font-size: 3rem;
@@ -197,7 +201,7 @@ export const PortfolioLink = styled.a`
     padding-top: 10px;
     font-size: 1.2rem;
     cursor: pointer;
-    
+
     .link-icon {
         opacity: 0;
         transition: opacity ease-in-out;

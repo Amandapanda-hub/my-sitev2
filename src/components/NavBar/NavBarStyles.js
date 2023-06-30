@@ -7,55 +7,39 @@ import {BiBookHeart} from 'react-icons/bi'
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 export const StyledMenuIcon = styled(FaBars)`
-  font-size: 30px;
+  font-size: 5vw;
 `;
 
 export const StyledCloseIcon = styled(FaTimes)`
-  font-size: 30px;
+  font-size: 5vw;
   position: absolute; 
   top: 5rem;
-  right: 2rem;`;
+  right: 0rem;
+  z-index: 1001;
+  `;
 
-export const MobileMenu = styled.div`
-  position: absolute;
+  export const MobileMenu = styled.div`
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 0;
+  position: fixed;
+  top: -2rem;
   right: 0;
-  transition: 0.3s;
+  font-size: 2.5vw;
   width: 100%;
   height: 100vh;
   background: rgba(0, 0, 0, 0.872);
   padding-top: 2rem;
-  display: flex;
+  z-index: 1000; 
+  transition: transform 0.3s ease-in-out; 
+  transform: ${({ isMenuOpen }) => (isMenuOpen ? 'translateX(0)' : 'translateX(100%)')}; 
 
-  & > ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    height: 100%;
-    justify-content: center;
 
-    @media (max-width: 990px) {
-      gap: 4rem;
-    } 
-  }
-
-  & > ul > li {
-    width: 100%;
-    text-align: center;
-  }
-
-  @media (max-width: 1240px) {
-    padding-top: 0;
-  }
-
-  @media (max-width: 990px) {
-    
-  }
-`;
+ @media (max-width: 360px) and (max-height: 700px ) {
+  
+ }
+ `;
 
 
 export const StyledSearchIcon = styled(AiOutlineSearch)`
@@ -81,7 +65,6 @@ export const StyledContactIcon = styled(BiMessageDetail)`
     font-size: 20px;
     margin-left: 10px;
     transform: scaleX(-1);
-    
 `
 
 export const StyledAttributionIcon = styled(BiBookHeart)`
@@ -104,6 +87,7 @@ export const Container = styled.div`
    width: 100%;
    max-width: 1400px;
   display: flex;
+
   justify-content: space-between;
   align-items: center;
   padding: 10px 0px;
@@ -121,6 +105,8 @@ export const Container = styled.div`
   @media (min-width: 1200px) {
     padding: 0 30px;
   }
+
+
 `;
 
 
@@ -128,8 +114,9 @@ export const Links = styled.div`
   display: flex;
   align-items: center;
   gap: 50px;
-  
- 
+
+  gap: ${({ isMobileView }) => isMobileView ? '0' : '50px'};
+
 `;
 
 export const Icon = styled.div`
@@ -150,13 +137,23 @@ export const Icons = styled.div`
 export const Logo = styled.img`
     height: 10rem;
 
+    
+
 `;
 
 export const List = styled.ul`
-    display: flex;
-    gap: 40px;
-    list-style: none;
+display: flex;
+justify-content: center;
+align-items: center;
+list-style: none;
 
+${({ isMobileView }) => isMobileView ? `
+  flex-direction: column;
+  gap: 40px;
+` : `
+  flex-direction: row;
+  gap: 30px;
+`}
 
 `;
 
@@ -166,4 +163,5 @@ export const ListItem = styled.li`
     @media (max-width: ${({ hideOnMobile }) => hideOnMobile ? '990px' : 'none'}) {
       display: none;
     }
+
 `;

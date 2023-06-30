@@ -68,14 +68,11 @@ export default function NavBar({ heroSectionId }) {
   };
 
   const menuList = (
-    <List>
-      {isMobileView && isMenuOpen && (
-        <ListItem>
-          <Icon onClick={() => setMenuOpen(false)}>
-            <StyledCloseIcon />
-          </Icon>
-        </ListItem>
-      )}
+    <List isMobileView={isMobileView && isMenuOpen}>
+       {isMobileView && isMenuOpen && (
+      <ListItem isMobileMenu={isMobileView && isMenuOpen}>
+      </ListItem>
+    )}
       <ListItem>
         {location.pathname === "/" ? (
           <Link smooth to="#hero-section">
@@ -112,30 +109,30 @@ export default function NavBar({ heroSectionId }) {
   return (
     <Section $issticky={issticky}>
       <Container>
-        <Links>
-        <Logo src={PandaProgrammerLogo} alt="Panda Programmer Logo" />
-          {isMobileView ? (
-            <>
-              <Icon onClick={() => setMenuOpen(!isMenuOpen)}>
-                {isMenuOpen ? <StyledCloseIcon /> : <StyledMenuIcon />}
-              </Icon>
-              {isMenuOpen && <MobileMenu>{menuList}</MobileMenu>}
-            </>
-          ) : (
-            menuList
-          )}
-        </Links>
-        {!isMobileView && (
-          <Icons>
-           <Link to="/hire">
-              <Button>Hire Now</Button>
-            </Link>
-            <Icon className='CustomIcon'>
-              <StyledSearchIcon />
+        <Links isMobileView={isMobileView}>
+        <Logo src={PandaProgrammerLogo} alt="Panda the Programmer Logo" />
+        {isMobileView ? (
+          <>
+            <Icon onClick={() => setMenuOpen(!isMenuOpen)}>
+              {isMenuOpen ? <StyledCloseIcon /> : <StyledMenuIcon />}
             </Icon>
-          </Icons>
+            {isMenuOpen && <MobileMenu isMenuOpen={isMenuOpen}>{menuList}</MobileMenu>}
+          </>
+        ) : (
+          menuList
         )}
-      </Container>
-    </Section>
-  );
+      </Links>
+      {!isMobileView && (
+        <Icons>
+          <Link to="/hire">
+            <Button>Hire Now</Button>
+          </Link>
+          <Icon className='CustomIcon'>
+            <StyledSearchIcon />
+          </Icon>
+        </Icons>
+      )}
+    </Container>
+  </Section>
+);
 }
