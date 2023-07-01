@@ -46,6 +46,11 @@ export const Section = styled.div`
  justify-content: space-between;
  scroll-snap-align: center;
  flex-direction: column;
+
+ @media (max-width: 600px ) and (max-width: 990px ) {
+    flex-direction: row-reverse;
+ }
+
 `;
 
 // export const Container = styled.div`

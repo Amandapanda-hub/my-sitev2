@@ -2,7 +2,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 import NavBar from '../../components/NavBar/NavBar'
 import {AiOutlineArrowRight} from "react-icons/ai"
 import { Section, Left, Title, Right, Img, Lang } from './HeroStyles.js';
-import { Button, WhatWeDoTitle, WhatWeDo, Line, Desc, Container } from '../../GlobalComponents.js'
+import { Button, WhatWeDoTitle, WhatWeDo, Line, Desc, NavWContainer } from '../../GlobalComponents.js'
 import Blob from '../../components/Blob/Blob';
 import VeryRoundedPersonalSelfie from '../../assets/images/smallerfile-veryroundedpersonalselfie.webp'
 
@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <Section id='hero-section'>
         <NavBar/>
-        <Container>
+        <NavWContainer>
             <Left>
                 <Title>Coding. Constellations. Charted.</Title>
                 <WhatWeDo>
@@ -31,7 +31,7 @@ export default function Hero() {
                 <Blob/>
                 <Img src={VeryRoundedPersonalSelfie} alt="Personal Selfie" />
             </Right>
-        </Container>
+        </NavWContainer>
     </Section>
   )
 }

@@ -18,6 +18,31 @@ export const Container = styled.div`
   @media (max-width: 1100px) {
     margin: 0 2rem 0 ;
  } 
+
+`;
+
+export const NavWContainer = styled.div`
+ max-width: 100%;
+ height: 100%;
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ padding: 0 8em;
+
+ @media (max-width: 1026px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem 2rem;
+  }
+
+  @media (max-width: 1100px) {
+    margin: 0 2rem 0 ;
+ } 
+
+ @media (max-width: 600px ) and (max-width: 990px ) {
+    padding: 0 2rem 5vh;
+ }
 `;
 
 export const Button = styled.button`

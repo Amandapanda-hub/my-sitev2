@@ -79,7 +79,7 @@ width: 100%;
 
 
 @media (max-width: 990px) {
-    top: 2rem;
+    top: 1rem;
 }
 
 `;
