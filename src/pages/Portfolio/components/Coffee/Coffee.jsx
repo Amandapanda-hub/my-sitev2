@@ -3,9 +3,10 @@ import { AiOutlineLink } from 'react-icons/ai';
 
 export default function Coffee() {
     const projects = [
-        { id: 1, name: 'Elite Elegance', description: 'Fully Responsive, Multi-Page, Nail Salon template.', url: 'https://amandapanda-hub.github.io/Elite-Elegance/' },
-        { id: 2, name: 'React - TechShop', description: 'Fully Responsive, Single-Page, TechShop template.', url: 'https://amandapanda-hub.github.io/techshop/' },
-        { id: 3, name: 'Fun Quote Generator', description: 'Fully Responsive, Single-Page, Fun Quote Generator', url: 'https://quote-generator-v1-bdmbggg51-amandapanda-hub.vercel.app/' },
+        { id: 1, name: 'TechShop', description: 'Fully Responsive, Single-Page, TechShop template.', url: 'https://amandapanda-hub.github.io/techshop/' },
+        { id: 2, name: 'Blissful Blooms', description: 'Fully Responsive, Single-Page, Nature Conservatory template.', url: 'https://blissful-blooms-react-tailwind-55cl.vercel.app/' },        
+        { id: 3, name: 'Elite Elegance', description: 'Fully Responsive, Multi-Page, Nail Salon template.', url: 'https://amandapanda-hub.github.io/Elite-Elegance/' },
+        { id: 4, name: 'Fun Quote Generator', description: 'Fully Responsive, Single-Page, Fun Quote Generator', url: 'https://quote-generator-v1-bdmbggg51-amandapanda-hub.vercel.app/' },
       ];
     
       const handleClick = (e, url) => {
